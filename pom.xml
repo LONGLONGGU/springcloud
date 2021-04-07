@@ -83,9 +83,20 @@
         <version>${log4j.version}</version>
       </dependency>
   </dependencies>
-
-
   </dependencyManagement>
+  <build>
+    <finalName>springCloud</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+           <fork>true</fork>
+          <addResources>true</addResources>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 
 
 </project>
