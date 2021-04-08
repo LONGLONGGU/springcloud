@@ -17,4 +17,4 @@ public class ApplicationContexConfig {
         return new RestTemplate();
     }
 }
-//bean  相当于 applicationContex.xml <bean id="" class="">
+//bean  相当于 applicationContex.xml <bean id="" class=""/>
