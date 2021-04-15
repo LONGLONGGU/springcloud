@@ -9,6 +9,17 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/cloud?useUnicode=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
     username: root
     password: root
+eureka:
+  client:
+    #表示是否将自己注册进EurekaServer 默认true
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+        #defaultZone: http://localhost:7001/eureka
+        defaultZone: http://eureka7001.com:7001/eureka,http://eureka7001.com:7002/eureka  #集群版
+  instance:
+    instance-id: payment8001
+    prefer-ip-address: true #显示ip信息
 mybatis:
   mapper-locations: classpath*:mapper/*.xml
   type-aliases-package: com.pie.springcloud.model
